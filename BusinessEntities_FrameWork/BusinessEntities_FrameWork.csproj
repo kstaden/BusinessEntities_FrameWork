@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E99D0D2A-BCBB-48AA-9F2B-EB62DB609777}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessEntities_FrameWork</RootNamespace>
+    <AssemblyName>BusinessEntities_FrameWork</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IAnställd.cs" />
+    <Compile Include="Interfaces\IBokning.cs" />
+    <Compile Include="Interfaces\IBokningSkidLektion.cs" />
+    <Compile Include="Interfaces\IBokningsregister.cs" />
+    <Compile Include="Interfaces\IButiksregister.cs" />
+    <Compile Include="Interfaces\IDeltagare.cs" />
+    <Compile Include="Interfaces\IFaktura.cs" />
+    <Compile Include="Interfaces\IFakturaregister.cs" />
+    <Compile Include="Interfaces\IFöretagsKund.cs" />
+    <Compile Include="Interfaces\IHyrpris.cs" />
+    <Compile Include="Interfaces\IKonferens.cs" />
+    <Compile Include="Interfaces\IKonferensPris.cs" />
+    <Compile Include="Interfaces\IKund.cs" />
+    <Compile Include="Interfaces\IKundregister.cs" />
+    <Compile Include="Interfaces\ILogi.cs" />
+    <Compile Include="Interfaces\ILogiBokning.cs" />
+    <Compile Include="Interfaces\ILogiPris.cs" />
+    <Compile Include="Interfaces\IMarknadsChef.cs" />
+    <Compile Include="Interfaces\IPreBokning.cs" />
+    <Compile Include="Interfaces\IPrivatKund.cs" />
+    <Compile Include="Interfaces\ISkidLektion.cs" />
+    <Compile Include="Interfaces\ISysAdmin.cs" />
+    <Compile Include="Interfaces\ITempKund.cs" />
+    <Compile Include="Interfaces\IUthyrning.cs" />
+    <Compile Include="Interfaces\IUthyrningsregister.cs" />
+    <Compile Include="Interfaces\IUtrustning.cs" />
+    <Compile Include="Interfaces\IUtrustningRegister.cs" />
+    <Compile Include="Models\Anställd.cs" />
+    <Compile Include="Models\Bokning.cs" />
+    <Compile Include="Models\BokningSkidLektion.cs" />
+    <Compile Include="Models\Bokningsregister.cs" />
+    <Compile Include="Models\Butiksregister.cs" />
+    <Compile Include="Models\Deltagare.cs" />
+    <Compile Include="Models\Faktura.cs" />
+    <Compile Include="Models\Fakturaregister.cs" />
+    <Compile Include="Models\FöretagsKund.cs" />
+    <Compile Include="Models\Gruppskidlektion.cs" />
+    <Compile Include="Models\Hyrpris.cs" />
+    <Compile Include="Interfaces\IVD.cs" />
+    <Compile Include="Interfaces\IGruppskidlektion.cs" />
+    <Compile Include="Interfaces\IPrivatskidlektion.cs" />
+    <Compile Include="Models\Konferens.cs" />
+    <Compile Include="Models\KonferensPris.cs" />
+    <Compile Include="Models\Kundregister.cs" />
+    <Compile Include="Models\Logi.cs" />
+    <Compile Include="Models\LogiBokning.cs" />
+    <Compile Include="Models\LogiPris.cs" />
+    <Compile Include="Models\MarknadsChef.cs" />
+    <Compile Include="Models\PreBokning.cs" />
+    <Compile Include="Models\PrivatKund.cs" />
+    <Compile Include="Models\Privatskidlektion.cs" />
+    <Compile Include="Models\SysAdmin.cs" />
+    <Compile Include="Models\TempKund.cs" />
+    <Compile Include="Models\Uthyrning.cs" />
+    <Compile Include="Models\Uthyrningsregister.cs" />
+    <Compile Include="Models\Utrustning.cs" />
+    <Compile Include="Models\VD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="suht2009DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="suht2009DataSet.xsc">
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="suht2009DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suht2009DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suht2009DataSet.xss">
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
