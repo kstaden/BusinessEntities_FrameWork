@@ -16,7 +16,6 @@ namespace BusinessEntities_FrameWork.Models
         public string Lärare { get; set; }
 
         // --
-        public SkidLektion SkidLektion { get; set; }
         public ICollection<Deltagare> PrivatDeltagare { get; set; }
     }
 }

@@ -33,7 +33,7 @@ namespace BusinessEntities_FrameWork.Models
         }
 
         // --
-        public SkidLektion SkidLektion { get; set; }
+       
         public ICollection<Deltagare> GruppDeltagare { get; set; }
         public int AntalDagar { get; set; }
         public string LektionsTyp { get; set; }

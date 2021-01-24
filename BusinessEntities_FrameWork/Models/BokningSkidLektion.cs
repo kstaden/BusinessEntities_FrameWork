@@ -18,6 +18,6 @@ namespace BusinessEntities_FrameWork.Models
 
         // --
         public Bokning Bokning { get; set; }
-        public SkidLektion SkidLektion { get; set; }
+      
     }
 }
